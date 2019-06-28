@@ -14,8 +14,10 @@ and use -plugin option when collector is started to point to plugin .so
 file from this repository.
 
 Example:
+```
 Dailin to router grpc port 57500 for subscriptions red-info and mem and use gpb encoding:
 telemetry-go-collector/bin/telemetry_dialin_collector -server 192.168.122.62:57500 -username *** -password *** -plugin plugin_65x.so -subscription red-info#mem -encoding gpb
+
 Start grpc server at port 57500 and expect to receive gpb encoded message:
 telemetry-go-collector/bin/telemetry_dialout_collector -port 57500 -plugin plugin_56x.so -encoding gpb
-
+```
